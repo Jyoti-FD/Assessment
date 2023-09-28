@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon link -->
+
+    <link rel="shortcut icon" href="favicon-img/register.png" type="image/x-icon">
+</head>
+<body>
+    <form>
+        <div class="container">
+            <h1>Student Registarration Form</h1>
+          </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="fname">First Name:</label>
+          </div>
+          <div class="col-33">
+            <input type="text" name="firstname" placeholder="Enter your first name" minlength="3" maxlength="6" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="lname">Last Name:</label>
+          </div>
+          <div class="col-33">
+            <input type="text" name="lastname" placeholder="Enter your last name"  minlength="3" maxlength="6" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="emali">Email:</label>
+          </div>
+          <div class="col-33">
+            <input type="text" name="email" placeholder="it should contain @.." required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="mobile no">Mobile:</label>
+          </div>
+          <div class="col-33">
+              <input type="number" id="number"  placeholder="only 10 digit are allowed" maxlength="10" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="Gender">Gender:</label>
+          </div>
+          <div class="col-33">
+              <input type="radio" name="Gender" value="Male" required>Male
+              <input type="radio"name="Gender" value="Female" required>Female
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+              <label for="DOB">Date Of Birth:</label>
+          </div>
+          <div class="col-33">
+              <input type="date" id="dob" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="Address">Address:</label>
+          </div>
+          <div class="col-33">
+            <textarea id="Address" style="height:90px" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="City">City:</label>
+          </div>
+          <div class="col-33">
+            <input type="text" name="city" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="Area PIN">Area PIN:</label>
+          </div>
+          <div class="col-33">
+            <input type="text" name="Area PIN" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="State">State:</label>
+          </div>
+          <div class="col-33">
+            <input type="text" name="State" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="Qualification">Qualification:</label>
+          </div>
+          <div class="col-33">
+            <select name="" id="Qualification" required>
+              <option value="Select Qualification">Select Qualification</option>
+              <option value="High School(10th)">High School(10th)</option>
+              <option value="Higher School(12th)">Higher School(12th)</option>
+              <option value="Graduation(bachelores)">Graduation(bachelores)</option>
+              <option value="Post Graduation(Masters)">Post Graduation(Masters)</option>
+              <option value="Phd">Phd</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-55">
+            <label for="Speacialization">Speacialization:</label>
+          </div>
+          <div class="col-33">
+              <input type="checkbox" name="" id="">Computer Science <br>
+              <input type="checkbox" name="" id="">Information Technology <br>
+              <input type="checkbox" name="" id="">Computer Architecture <br>
+              <input type="checkbox" name="" id="">Tele Communication
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-55">
+          <label for="Password">Password:</label>
+        </div>
+        <div class="col-33">
+         <input type="password" name="" id="password" required>
+        </div>
+      </div>
+        <div class="row">
+         <button>Registered</button>
+        </div>
+      </form>
+
+</body>
+</html>
