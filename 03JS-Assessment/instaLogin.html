@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram login form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <form>
+                <div class="logo">
+                    <img src="../03JS-Assessment/logo.png" alt="">
+                </div>
+                <div class="name-input input-box">
+                    <input type="text" required id="userInput" autocomplete="off">
+                    <span class="left-span">Phone number, username or email address</span>
+                </div>
+                <div class="password-input input-box">
+                    <input type="password" required id="pasInput">
+                    <span class="left-span">Password</span>
+                    <span class="right-span" id="show-btn">Show</span>
+                </div>
+                <div class="log-btn input-box">
+                    <input type="submit" value="Log in" id="log-btn">
+                </div>
+                <p class="or-p">or</p>
+                <div class="fb">
+                    <a
+                        href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26locale%3Den_GB%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26response_type%3Dcode%252Cgranted_scopes%26scope%3Demail%26state%3D%257B%2522fbLoginKey%2522%253A%25221cn9scxqzy3qf1b5fsl75yh71u4hbnprzskex5banxjax7jeri%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D94c12020-0afa-44f8-935e-aa1fb3a255b8%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25221cn9scxqzy3qf1b5fsl75yh71u4hbnprzskex5banxjax7jeri%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=en_GB&pl_dbl=0">Log
+                        in with Facebook</a>
+                </div>
+                <p class="forgot">
+                    <a href="https://www.instagram.com/accounts/password/reset/">Forgot your password?</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    let passwordInput = document.getElementById("pasInput");
+    let userInput = document.getElementById("userInput")
+    let Showbtn = document.getElementById("show-btn");
+    let form = document.querySelector("form")
+    let logbtn = document.getElementById("log-btn")
+    let password = /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{6,16}$/;
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    })
+    Showbtn.addEventListener("click", function () {
+        if (passwordInput.type === "password" && Showbtn.innerText === "Show") {
+            passwordInput.type = 'text';
+            Showbtn.innerText = "Hide";
+        }
+        else if (password.test(passwordInput.value)) {
+            logbtn.style.opacity = "1";
+            passwordInput.type = 'password';
+            Showbtn.innerText = "Show";
+        }
+        else {
+            passwordInput.type = 'password';
+            Showbtn.innerText = "Show";
+            logbtn.style.opacity = "0.5";
+        }
+    })
+</script>
+
+</html>
