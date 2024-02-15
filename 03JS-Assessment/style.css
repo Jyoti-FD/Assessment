@@ -5,12 +5,17 @@
             box-sizing: border-box;
         }
 
+        body{
+            background:  linear-gradient(to top right, orange, deeppink);
+            height: 100vh;
+        }
         .container {
             text-align: center;
-            padding: 10px;
+            padding: 50px;
         }
 
         .form-wrapper {
+            background-color: white;
             margin: 0 auto;
             width: 340px;
             border: 1px solid rgb(219, 219, 219);

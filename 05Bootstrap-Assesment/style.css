@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.button button{
+    padding: 4px 120px 4px 130px;
+    margin-left: 0px;
+    border: none;
+    border-radius: 20px;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 0 10px gray;
+}
+.col{
+    box-shadow: 0 0 30px gray;
+}
+.form-outline{
+    box-shadow:0 0 10px gray;
+    border-radius: 20px;
+}
+.text-muted{
+    text-decoration: none;
+}
+label{
+    color: deepskyblue;
+    cursor: pointer;
+}
